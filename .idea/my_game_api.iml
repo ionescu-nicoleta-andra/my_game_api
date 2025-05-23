@@ -104,6 +104,17 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/twig/twig" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/willdurand/negotiation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/easycorp/easyadmin-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/form" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/intl" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/ux-twig-component" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/twig/extra-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/twig/html-extra" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

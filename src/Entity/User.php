@@ -69,7 +69,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getRoles(): array
     {
-        return [$this->roles];
+        // Map your Role entities to role strings
+        $roles = $this->roles->map(function(Role $role) {
+            return $role->getName(); // assuming getName() returns "ROLE_ADMIN", etc
+        })->toArray();
+
+        // Guarantee every user has at least ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
     }
 
     /**

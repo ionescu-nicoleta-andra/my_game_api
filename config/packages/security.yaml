@@ -20,13 +20,23 @@ security:
             provider: app_user_provider
             jwt: ~
 
+        main:
+            pattern: ^/
+            provider: app_user_provider
+            lazy: true
+            form_login:
+                login_path: login
+                check_path: login
+                default_target_path: admin
+            logout:
+                path: logout
+                target: login
+            entry_point: form_login
+
     access_control:
-        # Allow public access to login and registration
         - { path: ^/api/login, roles: PUBLIC_ACCESS }
         - { path: ^/api/register, roles: PUBLIC_ACCESS }
-
-        # Allow public access to Swagger UI and API docs
         - { path: ^/api/docs, roles: PUBLIC_ACCESS }
-
-        # Protect everything else under /api with JWT
         - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
+        - { path: ^/login$, roles: PUBLIC_ACCESS }
+        - { path: ^/admin, roles: ROLE_ADMIN }
