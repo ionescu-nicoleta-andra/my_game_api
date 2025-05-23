@@ -1,0 +1,7 @@
+api_platform:
+  swagger:
+    api_keys:
+      authorization:
+        name: Authorization
+        type: header
+
