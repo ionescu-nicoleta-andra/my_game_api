@@ -30,9 +30,8 @@ class UserFixtures extends Fixture
 
         // Create users
         $nico = new User();
-        $nico->setEmail('nico@example.com');
+        $nico->setEmail('user@example.com');
         $nico->setPassword($this->hasher->hashPassword($nico, 'password123'));
-
         $nico->setRoles([$userRole]);
         $manager->persist($nico);
 

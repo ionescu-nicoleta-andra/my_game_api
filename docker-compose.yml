@@ -38,6 +38,21 @@ services:
     networks:
       - symfony
 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    depends_on:
+      - database
+    environment:
+      PMA_HOST: database
+      PMA_USER: symfony
+      PMA_PASSWORD: symfony
+    ports:
+      - "8081:80"
+    networks:
+      - symfony
+
 networks:
   symfony:
     driver: bridge
